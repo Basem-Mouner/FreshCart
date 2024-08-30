@@ -1,0 +1,42 @@
+
+$colors:(
+"primary":#09c,
+"secondary":#333,
+"success":#00aa00,
+"light":#ccc,
+"warning":#bbbb00,
+"default":gray,
+);
+
+
+@each $key,$value in $colors
+{
+
+@for  $i from 1 to 11{
+
+.bg_#{$key}_#{$i}{
+   background-color: rgba($color: $value, $alpha:$i/10);
+}
+
+}
+
+.text_#{$key}{
+color:#{$value}
+}
+
+.border_#{$key}{
+border-color:#{$value}
+}
+
+};
+
+$main-coler:red;
+$bckgroundColor:rgb(183, 255, 0);
+
+.Allorders {
+
+    color: $main-coler;
+    background-color:$bckgroundColor ;
+
+    
+}
