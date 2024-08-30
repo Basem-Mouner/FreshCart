@@ -28,7 +28,7 @@ export default function Allorders() {
 
     return (
       <>
-        <h1 className={`${style.bg_success_1} ${style.text_success}`}>well</h1>
+        // <h1 className={`${style.bg_success_1} ${style.text_success}`}>well</h1>
         <h1 className="text-2xl m-7">you are finsh payment </h1>
         <span className="text-sky-300">click here to continue shopping </span>
         <Link

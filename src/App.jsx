@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import { createBrowserRouter, HashRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, HashRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
 import Categories from './components/Categories/Categories';
@@ -38,7 +38,7 @@ function App() {
 
  
 
-  let routing = createBrowserRouter([
+  let routing = createHashRouter([
     {
       path: "",
       element: <Layout />,
@@ -123,7 +123,7 @@ function App() {
         { path: "*", element: <NotFound /> },
         { path: "verifycode", element: <VerifyCode /> },
         { path: "checkcode", element: <Checkcode /> },
-        { path: "resetPassword", element: <ResetPassword/> },
+        { path: "resetPassword", element: <ResetPassword /> },
       ],
     },
   ]);
