@@ -128,22 +128,29 @@ async function addProduct(productId) {
           {/* <img src={ProductDetails?.imageCover}alt={ProductDetails?.title}className="w-full"/> */}
         </div>
         <div className="w-3/4 p-6 text-center">
-          <h1 className="text-gray-950 font-normal text-lg">
+          <h1 className="text-gray-950 dark:text-white font-normal text-lg">
             {ProductDetails?.title}
           </h1>
-          <p className="mt-4 font-light text-gray-600">
+          <p className="mt-4 font-light text-gray-600 dark:text-white">
             {ProductDetails?.description}
           </p>
           <div className="flex justify-between mt-2">
-            <h4 className=" text-lime-800"> {ProductDetails?.price} EGY</h4>
-            <h6 className=" text-black font-light">
+            <h4 className=" text-lime-800 dark:text-lime-300 ml-4"> {ProductDetails?.price} EGY</h4>
+            <h6 className=" text-black dark:text-white font-light ">
               {ProductDetails?.ratingsAverage}
-              <i className="fa-solid fa-star text-[#ffd43b]"></i>
+              <i className="fa-solid fa-star text-[#ffd43b] mx-2"></i>
             </h6>
           </div>
 
-          <button onClick={() => addProduct(id)}  className="mt-4 px-10 py-2 text-white bg-green-500 hover:bg-green-900 w-5/6  rounded-full">
-           {isLoading ? <i className="fas fa-spinner fa-spin"></i> : <i class="fa-solid fa-cart-plus"></i>}
+          <button
+            onClick={() => addProduct(id)}
+            className="mt-4 px-10 py-2 text-white bg-green-500 hover:bg-green-900 w-5/6  rounded-full"
+          >
+            {isLoading ? (
+              <i className="fas fa-spinner fa-spin"></i>
+            ) : (
+              <i class="fa-solid fa-cart-plus"></i>
+            )}
           </button>
         </div>
       </div>

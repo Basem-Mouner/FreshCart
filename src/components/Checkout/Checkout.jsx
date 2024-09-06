@@ -20,10 +20,6 @@ export default function Checkout() {
    }
  }
 
-  
-    
-  
-
   useEffect(() => {
 
    
@@ -37,7 +33,7 @@ export default function Checkout() {
     },
 
     onSubmit: () => {
-      handlecheckout(cart.data._id, "https://fresh-cart-puce.vercel.app/#/");
+      handlecheckout(cart.data._id, "http://localhost:5173");
     },
   });
 
